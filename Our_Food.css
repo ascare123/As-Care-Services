@@ -1,0 +1,643 @@
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: white; /* Set default text color to white */
+    background-color: #e0f0f0; /* Change background color to #e0f0f0 */
+}
+
+/* Ensure all elements use border-box sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make images and videos responsive */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve readability on small screens */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Ensure containers don't overflow */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: white; /* Set default text color to white */
+}
+
+.top-bar {
+    border-bottom: 1px solid white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between; /* Space out contact info and search */
+    align-items: center;
+    padding: 10px 20px; /* Adjusted padding */
+    background-color: #4f7f7f;
+    color: white; /* Ensure text color is white for all child elements */
+}
+
+.contact-info {
+    font-size: 18px;
+    color: white  !important;
+    text-align: center; /* Center align text */
+    flex: 1; /* Allow it to take full space */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Align vertically */
+}
+
+.contact-info a {
+    color: white; /* Ensure links are also white */    text-decoration: none; /* Remove underline */
+}
+.contact-info * {
+    color: white !important;
+}
+
+.top-bar .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    max-width: 100%; /* Ensure it doesn't overflow on small screens */
+    margin-left: 20px; /* Add spacing between contact info and search */
+}
+
+.top-bar input[type="text"] {
+    padding: 8px 35px 8px 10px; /* Adjusted padding for icon */
+    border-radius: 20px; /* More rounded corners */
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 14px;
+    outline: none; /* Remove default outline */
+    background-color: #f9f9f9; /* Light background for input */
+    color: #333; /* Text color for input */
+}
+
+.top-bar .search i {
+    position: absolute;
+    right: 10px;
+    color: #4f7f7f; /* Match the top-bar background color */
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column; /* Stack contact info vertically */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .search {
+        width: 100%; /* Full width for search bar */
+        margin-left: 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .contact-info {
+        font-size: 14px; /* Reduce font size for very small screens */
+    }
+
+    .top-bar input[type="text"] {
+        font-size: 12px; /* Reduce input font size for very small screens */
+    }
+}
+
+/* Main Navigation Styles */
+.main-nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center;
+    padding-left: 20px; /* Padding for the main navigation */
+    padding-right: 20px;
+    background-color: #4f7f7f; /* Match the top-bar background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0;
+    color: white; /* Ensure text color is white for all child elements */
+    position: relative; /* Ensure the nav is positioned correctly */
+}
+
+.main-nav .logo {
+    height: 80px; /* Increased logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.main-nav nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Spacing between menu items */
+}
+
+.main-nav nav ul li {
+    display: inline-block; /* Display menu items inline */
+}
+
+.main-nav nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white !important; /* Force white color for links */
+    font-size: 16px;
+    font-weight: 600; /* Semi-bold font */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.main-nav nav ul li a:hover {
+    color: #f0f0f0 !important; /* Slightly lighter white on hover */
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none; /* Hide by default */
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* Ensure the icon is visible */
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        position: absolute; /* Position the icon at the top-right */
+        top: 20px; /* Adjust based on your design */
+        right: 20px; /* Position at the top-right corner */
+    }
+
+    .main-nav nav {
+        display: block; /* Always keep the nav block for transition */
+        width: 100%; /* Full width for the dropdown menu */
+        background-color: #4f7f7f; /* Match the navbar background */
+        max-height: 0; /* Start with no height */
+        overflow: hidden; /* Hide overflow content */
+        transition: max-height 0.5s ease-out; /* Smooth transition for max-height */
+    }
+
+    .main-nav nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 0; /* Remove gap between items */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+
+    .main-nav nav ul li {
+        text-align: center; /* Center-align menu items */
+        padding: 10px 0; /* Add vertical padding only */
+        border-bottom: 1px solid #3e6f6f; /* Add a border between items */
+        margin: 0; /* Remove default margin */
+    }
+
+    .main-nav nav.active {
+        max-height: 300px; /* Adjust based on your menu content height */
+    }
+
+    /* Push hero image (or other content) below the menu when it opens */
+    .main-nav nav.active + .hero {
+        margin-top: 300px; /* Adjust based on the menu height */
+        transition: margin-top 0.5s ease-out; /* Smooth transition for content */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav .logo {
+        height: 60px; /* Further reduce logo size for very small screens */
+    }
+
+    .main-nav nav ul li a {
+        font-size: 12px; /* Further reduce font size for very small screens */
+    }
+}
+
+/* Main Navigation Styles */
+.main-nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center;
+    padding-left: 20px; /* Padding for the main navigation */
+    padding-right: 20px;
+    background-color: #4f7f7f; /* Match the top-bar background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0;
+    color: white; /* Ensure text color is white for all child elements */
+    position: relative; /* Ensure the nav is positioned correctly */
+}
+
+.main-nav .logo {
+    height: 80px; /* Increased logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.main-nav nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Spacing between menu items */
+}
+
+.main-nav nav ul li {
+    display: inline-block; /* Display menu items inline */
+}
+
+.main-nav nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white !important; /* Force white color for links */
+    font-size: 16px;
+    font-weight: 600; /* Semi-bold font */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.main-nav nav ul li a:hover {
+    color: #f0f0f0 !important; /* Slightly lighter white on hover */
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none; /* Hide by default */
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* Ensure the icon is visible */
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        position: absolute; /* Position the icon at the top-right */
+        top: 20px; /* Adjust based on your design */
+        right: 20px; /* Position at the top-right corner */
+    }
+
+    .main-nav nav {
+        display: none; /* Hide the navigation menu by default on mobile */
+        width: 100%; /* Full width for the dropdown menu */
+        background-color: #4f7f7f; /* Match the navbar background */
+        position: absolute;
+        top: 80px; /* Adjust based on your header height */
+        left: 0;
+        z-index: 1000; /* Ensure the menu is above other content */
+    }
+
+    .main-nav nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 0; /* Remove gap between items */
+    }
+
+    .main-nav nav ul li {
+        text-align: center; /* Center-align menu items */
+        padding: 10px; /* Add padding for better spacing */
+        border-bottom: 1px solid #3e6f6f; /* Add a border between items */
+    }
+
+    .main-nav nav.active {
+        display: block; /* Show the menu when active */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav .logo {
+        height: 60px; /* Further reduce logo size for very small screens */
+    }
+
+    .main-nav nav ul li a {
+        font-size: 12px; /* Further reduce font size for very small screens */
+    }
+}
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    background: rgba(79, 127, 127, 0.8);
+    color: #fff;
+    padding: 20px;
+    max-width: 90%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+    .hero-text {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Food Section */
+.food-section {
+    background-color: #4f7f7f;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Responsive Food Section */
+@media (max-width: 768px) {
+    .food-section {
+        font-size: 20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-section {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+/* Food Info */
+.food-info {
+    text-align: center;
+    padding: 40px;
+    width: 80%;
+    margin: auto;
+    color: #4f7f7f;
+    background: url('your-background-image.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Responsive Food Info */
+@media (max-width: 768px) {
+    .food-info {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-info {
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+/* Download Button */
+.download-btn {
+    background-color: #b6d1c9;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: 3px solid #3e8070;
+    border-radius: 40px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px; /* Add margin-top to create gap */
+}
+
+.download-btn:hover {
+    background-color: #3e8070;
+    color: white;
+}
+
+/* Responsive Download Button */
+@media (max-width: 768px) {
+    .download-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+        margin-top: 15px; /* Adjust margin-top for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .download-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-top: 10px; /* Adjust margin-top for very small screens */
+    }
+}
+
+/* Footer Specific Styles */
+footer {
+    background-color: #4f7f7f;
+    color: white;
+    padding: 40px 20px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -35px;
+}
+
+footer .footer-logo img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+footer .footer-logo p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+footer .footer-links h3, footer .footer-contact h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+
+footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+footer .footer-links ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+footer .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-contact {
+    text-align: left;
+}
+
+footer .footer-contact p {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+footer .footer-contact p i {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center; /* Center all items horizontally */
+        text-align: center; /* Center text within each item */
+    }
+
+    .footer-logo, .footer-links, .footer-contact {
+        margin-bottom: 20px;
+        width: 100%; /* Ensure full width for centering */
+    }
+
+    /* Center the Explore section */
+    .footer-links {
+        text-align: center !important; /* Force center alignment */
+    }
+
+    .footer-links h3 {
+        text-align: center !important; /* Force center alignment for the Explore heading */
+        margin-left: auto; /* Ensure no left margin */
+        margin-right: auto; /* Ensure no right margin */
+    }
+
+    .footer-links ul {
+        padding: 0; /* Remove default padding */
+        list-style: none; /* Remove bullet points */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center list items horizontally */
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px; /* Add spacing between list items */
+    }
+
+    /* Center the Contact Us section */
+    .footer-contact {
+        text-align: center !important; /* Force center alignment */
+    }
+
+    .footer-contact h3 {
+        text-align: center !important; /* Force center alignment for the Contact Us heading */
+        margin-left: auto; /* Ensure no left margin */
+        margin-right: auto; /* Ensure no right margin */
+    }
+
+    .footer-contact p {
+        display: flex;
+        justify-content: center; /* Center-align contact info */
+        align-items: center;
+        gap: 8px; /* Space between icon and text */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .footer-links ul li, .footer-contact p {
+        font-size: 12px;
+    }
+
+    .footer-contact p i {
+        font-size: 14px; /* Adjust icon size for smaller screens */
+    }
+}
+
+/* Chat Button */
+#chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: #4f7f7f;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+#chat-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Chat Button */
+@media (max-width: 480px) {
+    #chat-button {
+        width: 50px;
+        height: 50px;
+    }
+}
