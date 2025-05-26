@@ -87,7 +87,7 @@ function showForm(formId) {
 
 function formsubmmisiona(){
     // Email variable for easy change
-const adminEmail = "hassan.dewan47@gmail.com";
+const adminEmail = "swan@ascareservices.co.uk";
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("#book-visit form");
