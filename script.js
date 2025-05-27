@@ -84,57 +84,54 @@ function showForm(formId) {
     // Show the selected form
     document.getElementById(formId).style.display = "block";
 }
+function formsubmmisiona() {
+    const adminEmail = "swan@ascareservices.co.uk";
 
-function formsubmmisiona(){
-    // Email variable for easy change
-const adminEmail = "swan@ascareservices.co.uk";
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select all forms inside book-visit and request-brochure
+        const forms = document.querySelectorAll("#book-visit form, #request-brochure form");
 
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("#book-visit form");
+        forms.forEach((form) => {
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Stop default form submission
-        
-        // Check if all required fields are filled
-        const inputs = form.querySelectorAll("input[required], textarea[required]");
-        let allFilled = true;
-        
-        inputs.forEach(input => {
-            if (!input.value.trim()) {
-                allFilled = false;
-                input.style.border = "2px solid red"; // Highlight empty fields
-            } else {
-                input.style.border = ""; // Reset border if filled
-            }
-        });
+                const inputs = form.querySelectorAll("input[required], textarea[required]");
+                let allFilled = true;
 
-        if (!allFilled) {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Please fill all required fields!"
+                inputs.forEach((input) => {
+                    if (!input.value.trim()) {
+                        allFilled = false;
+                        input.style.border = "2px solid red";
+                    } else {
+                        input.style.border = "";
+                    }
+                });
+
+                if (!allFilled) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Please fill all required fields!"
+                    });
+                    return;
+                }
+
+                // Set the FormSubmit action
+                form.action = `https://formsubmit.co/${adminEmail}`;
+                form.method = "POST";
+                form.submit();
+
+                Swal.fire({
+                    icon: "success",
+                    title: "Thank You!",
+                    text: "Your form has been submitted successfully.",
+                    confirmButtonText: "OK"
+                }).then(() => {
+                    form.reset();
+                });
             });
-            return;
-        }
-
-        // Submit form using FormSubmit service
-        form.action = `https://formsubmit.co/${adminEmail}`;
-        form.method = "POST";
-        
-        form.submit();
-        
-        // Show success message
-        Swal.fire({
-            icon: "success",
-            title: "Thank You!",
-            text: "Your form has been submitted successfully.",
-            confirmButtonText: "OK"
-        }).then(() => {
-            form.reset(); // Clear form after user clicks OK
         });
     });
-});
-
 }
 
 formsubmmisiona();
