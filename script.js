@@ -1,7 +1,3 @@
-document.getElementById('menuIcon').addEventListener('click', function () {
-    document.getElementById('navMenu').classList.toggle('active');
-});
-
 
 // JavaScript to handle the search click event
 document.addEventListener("DOMContentLoaded", function() {
@@ -134,3 +130,7 @@ function formsubmmisiona() {
 }
 
 formsubmmisiona();
+document.getElementById('menuIcon').addEventListener('click', function () {
+    document.getElementById('navMenu').classList.toggle('active');
+});
+
