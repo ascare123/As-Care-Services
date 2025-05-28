@@ -53,7 +53,69 @@
                 <li><a href="about.html">About us</a></li>
                 <li><a href="Contact.html">Contact us</a></li>
                 <li><a href="Review.html">Reviews</a></li>
-              <li><a href="#" onclick="alert('There are no vacancies available'); return false;">Current Vacancies</a></li>
+           <li>
+  <a href="#" onclick="showVacancyOverlay(); return false;">Current Vacancies</a>
+</li>
+
+<!-- Vacancy Overlay -->
+<div id="vacancy-overlay">
+  <div class="vacancy-content">
+    <h1>Careers</h1>
+    <p>There are currently no vacancies available within AS Care</p>
+    <button onclick="closeVacancyOverlay()">Close</button>
+  </div>
+</div>
+
+<style>
+  #vacancy-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #c6ffff;
+    z-index: 9999;
+    text-align: center;
+    padding-top: 10%;
+  }
+
+  .vacancy-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+
+  .vacancy-content p {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .vacancy-content button {
+    padding: 0.8em 2em;
+    font-size: 1em;
+    background-color: #222;
+    color: #c6ffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .vacancy-content button:hover {
+    background-color: #333;
+  }
+</style>
+
+<script>
+  function showVacancyOverlay() {
+    document.getElementById("vacancy-overlay").style.display = "block";
+  }
+
+  function closeVacancyOverlay() {
+    document.getElementById("vacancy-overlay").style.display = "none";
+  }
+</script>
+
 
             </ul>
         </nav>
@@ -63,7 +125,7 @@
 <main>
     <section id="hero" style="background-image: url('hero-image.jpg');">
         <div class="hero-text">
-            <h1>AS CARE SERVICES</h1>
+            <h1>AS CARE</h1>
             <p class="swan-care-home">Swan Care Home is pleasantly situated in Tillingham, a small village situated within the vicinity of Maldon. Despite its limited local amenities, it boasts a picturesque location with a few local pubs, a mobile library, a mobile fish and chip van, and a local post office/grocery shop. The preferred mode of transport is driving, as there is very limited public transport available.</p>
         </div>
     </section>
@@ -78,8 +140,9 @@
             </div>
             <div class="intro-text">
                 <h2>INTRODUCTION</h2>
-                <p><strong>AS Care Services, a company owned by Airaa Swaan, has over 10+ years of experience in the care sector. Their CEO's motto states, "If my elderly family members do not wish to reside here, we must urgently consider changing our approach." Airaa Swaan LTD collaborates with numerous reputable companies to ensure that we are consistently superior in all aspects.</strong></p>
                 <p>Swan Care Home is set in the tranquil Village of Tillingham within the county of Essex. We have 18 single rooms and 1 double room for Elderly people and people with Dementia aged 65 years and over.</p>
+                <p><strong>At Swan, we are a unified family.</strong></p>
+        
                 <div class="contact-container">
                            <p style="color:  #4f7f7f;">
   <i class="fas fa-phone" style="color:  #4f7f7f;"></i> 
@@ -107,8 +170,7 @@
                 <h2>Welcome to Swan Care Home, Tillingham</h2>
                 <p>We have a GP complete regular rounds, District Nurse teams and a visiting Chiropodist. We also have other visiting professionals for example Dieticians, Physiotherapists, if needed to ensure the best quality of life for our service users.</p>
                 <p>We have activities schedule that takes into account all of our service users' individual requirements. Activities are planned individually and in groups. Some service users enjoy a chat, cup of tea and activities with people that live in the Village. We also arrange outings throughout the year and the Christmas Pantomime is always a favourite. We arrange fundraising events to raise funds for service user trips but also other charities such as McMillan and the Alzheimers Society.</p>
-                <p><strong>At Swan, we are a unified family.</strong></p>
-            </div>
+                  </div>
 
             <div class="welcome-image">
                 <div class="image-container">
@@ -187,8 +249,67 @@
         <div class="footer-logo">
             <img src="1000126398.png" alt="AS Care Services Logo">
           <p>
-  <a href="vacancies.html" style="color: white;">AS CAREERS<br>Current Vacancies</a>
-</p>
+<a href="#" onclick="showVacancyOverlay(); return false;" style="color: white;">Current Vacancies</a>
+<!-- Vacancy Overlay -->
+<div id="vacancy-overlay">
+  <div class="vacancy-content">
+    <h1>Careers</h1>
+    <p>There are currently no vacancies available within AS Care</p>
+    <button onclick="closeVacancyOverlay()">Close</button>
+  </div>
+</div>
+
+<style>
+  #vacancy-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #c6ffff;
+    z-index: 9999;
+    text-align: center;
+    padding-top: 10%;
+  }
+
+  .vacancy-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+
+  .vacancy-content p {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .vacancy-content button {
+    padding: 0.8em 2em;
+    font-size: 1em;
+    background-color: #222;
+    color: #c6ffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .vacancy-content button:hover {
+    background-color: #333;
+  }
+</style>
+
+<script>
+  function showVacancyOverlay() {
+    document.getElementById("vacancy-overlay").style.display = "block";
+  }
+
+  function closeVacancyOverlay() {
+    document.getElementById("vacancy-overlay").style.display = "none";
+  }
+</script>
+
+</a>
         </div>
         <div class="footer-links">
             <h3>Explore</h3>
@@ -201,7 +322,7 @@
     </div>
     <div class="footer-contact">
         <h3>CONTACT US</h3>
-        <p>If you'd like more details about our care facilities, staff and locations, simply contact us today at AS Care Services and our staff will be happy to help.</p>
+        <p>If you'd like more details about our care facilities, staff and locations, simply contact us today at AS Care and our staff will be happy to help.</p>
     </div>
 </footer>
 </body>

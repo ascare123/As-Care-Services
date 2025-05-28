@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activities & Wellbeing - AS Care Services</title>
+    <title>Activities & Wellbeing - AS Care</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="Contact.css">
 </head>
@@ -58,7 +58,7 @@
     <div class="contact-container">
         <div class="contact-info-box">
             <h2>CONTACT <span>US</span></h2>
-            <p>If you'd like more details about our care facilities, staff and locations, simply contact us today at <strong>AS Care Services</strong> and our staff will be happy to help.</p>
+            <p>If you'd like more details about our care facilities, staff and locations, simply contact us today at <strong>AS Care</strong> and our staff will be happy to help.</p>
         </div>
         
         <div class="contact-form">
@@ -89,7 +89,67 @@
     <div class="footer-content">
         <div class="footer-logo">
             <img src="1000126398.png" alt="AS Care Services Logo">
-            <p>AS Care CAREERS<br>Current Vacancies</p>
+        <a href="#" onclick="showVacancyOverlay(); return false;" style="color: white;">Current Vacancies</a>
+<!-- Vacancy Overlay -->
+<div id="vacancy-overlay">
+  <div class="vacancy-content">
+    <h1>Careers</h1>
+    <p>There are currently no vacancies available within AS Care</p>
+    <button onclick="closeVacancyOverlay()">Close</button>
+  </div>
+</div>
+
+<style>
+  #vacancy-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #c6ffff;
+    z-index: 9999;
+    text-align: center;
+    padding-top: 10%;
+  }
+
+  .vacancy-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+
+  .vacancy-content p {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .vacancy-content button {
+    padding: 0.8em 2em;
+    font-size: 1em;
+    background-color: #222;
+    color: #c6ffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .vacancy-content button:hover {
+    background-color: #333;
+  }
+</style>
+
+<script>
+  function showVacancyOverlay() {
+    document.getElementById("vacancy-overlay").style.display = "block";
+  }
+
+  function closeVacancyOverlay() {
+    document.getElementById("vacancy-overlay").style.display = "none";
+  }
+</script>
+
+
         </div>
         <div class="footer-links">
             <h3>Explore</h3>
