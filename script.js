@@ -1,8 +1,7 @@
-
-document.getElementById('menuIcon').addEventListener('click', function() {
-    var navMenu = document.getElementById('navMenu');
-    navMenu.classList.toggle('active');
+document.getElementById('menuIcon').addEventListener('click', function () {
+    document.getElementById('navMenu').classList.toggle('active');
 });
+
 
 // JavaScript to handle the search click event
 document.addEventListener("DOMContentLoaded", function() {

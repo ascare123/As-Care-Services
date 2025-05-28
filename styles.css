@@ -169,52 +169,43 @@ img {
 
 /* Mobile Menu Icon */
 .menu-icon {
-    display: none; /* Hide by default */
-    font-size: 24px;
+ display: none;
+    font-size: 2em;
+    color: white;
     cursor: pointer;
-    color: white; /* Ensure the icon is visible */
 }
 
-/* Mobile Navigation Styles */
+/* Mobile styles */
 @media (max-width: 768px) {
     .menu-icon {
-        display: block; /* Show menu icon on mobile */
-        position: absolute; /* Position the icon at the top-right */
-        top: 20px; /* Adjust based on your design */
-        right: 20px; /* Position at the top-right corner */
+        display: block;
     }
 
-    .main-nav nav {
-        display: block; /* Always keep the nav block for transition */
-        width: 100%; /* Full width for the dropdown menu */
-        background-color: #4f7f7f; /* Match the navbar background */
-        max-height: 0; /* Start with no height */
-        overflow: hidden; /* Hide overflow content */
-        transition: max-height 0.5s ease-out; /* Smooth transition for max-height */
+    #navMenu {
+        display: none;
+        width: 100%;
+        background-color: #111;
+        position: absolute;
+        top: 60px; /* Adjust based on your layout */
+        left: 0;
+        z-index: 1000;
     }
 
-    .main-nav nav ul {
-        flex-direction: column; /* Stack menu items vertically */
-        gap: 0; /* Remove gap between items */
-        padding: 0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
+    #navMenu.active {
+        display: block;
     }
 
-    .main-nav nav ul li {
-        text-align: center; /* Center-align menu items */
-        padding: 10px 0; /* Add vertical padding only */
-        border-bottom: 1px solid #3e6f6f; /* Add a border between items */
-        margin: 0; /* Remove default margin */
+    #navMenu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
     }
 
-    .main-nav nav.active {
-        max-height: 300px; /* Adjust based on your menu content height */
-    }
-
-    /* Push hero image (or other content) below the menu when it opens */
-    .main-nav nav.active + .hero {
-        margin-top: 300px; /* Adjust based on the menu height */
-        transition: margin-top 0.5s ease-out; /* Smooth transition for content */
+    #navMenu ul li {
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+        border-bottom: 1px solid #333;
     }
 }
 
