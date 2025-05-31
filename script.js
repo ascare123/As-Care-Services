@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menuIcon');
+    const navMenu = document.querySelector('#navMenu ul');
+
+    menuIcon.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+    });
+});
 
 // JavaScript to handle the search click event
 document.addEventListener("DOMContentLoaded", function() {
@@ -10,8 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (query) {
             // Redirect to a new tab or specific URL based on the search query
             window.location.href = `https://www.example.com/search?q=${encodeURIComponent(query)}`;
-            // Or, if you want to switch tabs in the same page:
-            // window.location.href = `#${encodeURIComponent(query)}`;
+       
         } else {
             alert("Please enter a search term.");
         }
@@ -19,12 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-let images = ["image1.png", "image2.png", "image3.png"]; // Replace with actual image paths
+let images = ["image1.png", "image2.png", "image3.png"];
 let currentIndex = 0;
 const imgElement = document.getElementById("slider-image");
 let autoSlideInterval;
 
-// Function to change slide
 function changeSlide(direction) {
     currentIndex += direction;
 
@@ -34,18 +40,15 @@ function changeSlide(direction) {
         currentIndex = 0;
     }
 
-    // Preload next image
     let nextImage = new Image();
     nextImage.src = images[currentIndex];
 
-    // Apply fade effect
     imgElement.style.opacity = 0;
     setTimeout(() => {
-        imgElement.src = nextImage.src; // Use preloaded image
+        imgElement.src = nextImage.src; 
         imgElement.style.opacity = 1;
     }, 300);
 
-    // Reset auto-slide timer when user manually changes the slide
     resetAutoSlide();
 }
 
@@ -130,7 +133,3 @@ function formsubmmisiona() {
 }
 
 formsubmmisiona();
-document.getElementById('menuIcon').addEventListener('click', function () {
-    document.getElementById('navMenu').classList.toggle('active');
-});
-

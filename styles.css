@@ -202,7 +202,7 @@ img {
     }
 
     #navMenu ul li {
-        width: 100%;
+        width: 120%;
         text-align: center;
         padding: 1em 0;
         border-bottom: 1px solid #333;
@@ -238,70 +238,53 @@ img {
     width: auto; /* Maintain aspect ratio */
 }
 
-.main-nav nav ul {
-    list-style: none; /* Remove bullet points */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px; /* Spacing between menu items */
+/* Base styles */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
 }
 
-.main-nav nav ul li {
-    display: inline-block; /* Display menu items inline */
+.main-nav nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
 }
 
 .main-nav nav ul li a {
-    text-decoration: none; /* Remove underline */
-    color: white !important; /* Force white color for links */
-    font-size: 16px;
-    font-weight: 600; /* Semi-bold font */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: white;
+    text-decoration: none;
 }
 
-.main-nav nav ul li a:hover {
-    color: #f0f0f0 !important; /* Slightly lighter white on hover */
-}
-
-/* Mobile Menu Icon */
-.menu-icon {
-    display: none; /* Hide by default */
-    font-size: 24px;
-    cursor: pointer;
-    color: white; /* Ensure the icon is visible */
-}
-
-/* Mobile Navigation Styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .menu-icon {
-        display: block; /* Show menu icon on mobile */
-        position: absolute; /* Position the icon at the top-right */
-        top: 20px; /* Adjust based on your design */
-        right: 20px; /* Position at the top-right corner */
+        display: block;
     }
 
-    .main-nav nav {
-        display: none; /* Hide the navigation menu by default on mobile */
-        width: 100%; /* Full width for the dropdown menu */
-        background-color: #4f7f7f; /* Match the navbar background */
+    #navMenu ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
         position: absolute;
-        top: 80px; /* Adjust based on your header height */
-        left: 0;
-        z-index: 1000; /* Ensure the menu is above other content */
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
     }
 
-    .main-nav nav ul {
-        flex-direction: column; /* Stack menu items vertically */
-        gap: 0; /* Remove gap between items */
+    #navMenu ul.show {
+        display: flex;
+    }
+
+    .main-nav {
+        position: relative;
     }
 
     .main-nav nav ul li {
-        text-align: center; /* Center-align menu items */
-        padding: 10px; /* Add padding for better spacing */
-        border-bottom: 1px solid #3e6f6f; /* Add a border between items */
-    }
-
-    .main-nav nav.active {
-        display: block; /* Show the menu when active */
+        padding: 1em 0;
     }
 }
 
