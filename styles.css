@@ -134,7 +134,7 @@ img {
     background-color: #4f7f7f; /* Match the top-bar background color */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     margin: 0;
-    color: white; /* Ensure text color is white for all child elements */
+    color: rgb(255, 252, 252); /* Ensure text color is white for all child elements */
     position: relative; /* Ensure the nav is positioned correctly */
 }
 
