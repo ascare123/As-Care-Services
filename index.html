@@ -429,9 +429,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <form>
                 <input type="text" placeholder="Name*" required>
              
-                <input type="date" required placeholder="date*">
-                <input type="email" placeholder="Email*" required>
-                <input type="tel" placeholder="Telephone*" required>
+              <input type="date" id="date" name="date" onfocus="this.showPicker()" required>
+<script>
+  const dateInput = document.getElementById("date");
+  dateInput.addEventListener("input", () => {
+    dateInput.classList.add("has-value");
+  });
+</script>  <input type="tel" placeholder="Telephone*" required>
                 <textarea placeholder="Your message*"></textarea>
                 <label class="checkbox-container">
                     <input type="checkbox" required> I confirm I have read and understood the privacy notice
